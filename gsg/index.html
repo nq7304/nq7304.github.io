@@ -1,0 +1,746 @@
+
+
+ 
+  <!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51392658-9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-51392658-9');
+  </script>
+
+  
+  <link href='../fonts/opensans.css' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <title>This is my awesome website</title>
+    <meta name="description" content="Let's say you want to make a list of best headphones">
+
+    <meta name="image" content="meta.png">
+
+    <meta itemprop="name" content="This is my awesome website">
+    <meta itemprop="description" content="Let's say you want to make a list of best headphones">
+    <meta itemprop="image" content="https://images.unsplash.com/uploads/1412282232015a06e258a/4bdd2a58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ea87e217bd1bbf4d3e48a937452dd97&auto=format&fit=crop&w=1350&q=80">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="This is my awesome website">
+    <meta name="twitter:description" content="Let's say you want to make a list of best headphones">
+    <meta name="twitter:creator" content="@AndreyAzimov">
+    <meta name="twitter:image:src" content="https://images.unsplash.com/uploads/1412282232015a06e258a/4bdd2a58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ea87e217bd1bbf4d3e48a937452dd97&auto=format&fit=crop&w=1350&q=80">
+
+    <meta name="og:title" content="This is my awesome website">
+    <meta name="og:description" content="Let's say you want to make a list of best headphones">
+    <meta name="og:image" content="https://images.unsplash.com/uploads/1412282232015a06e258a/4bdd2a58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ea87e217bd1bbf4d3e48a937452dd97&auto=format&fit=crop&w=1350&q=80">
+    <meta name="og:site_name" content="This is my awesome website">
+    <meta name="og:type" content="website">
+
+<link rel="shortcut icon" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-23/4f3ad792719344e942f459a655033d73.ico" type="image/x-icon">
+<link rel="icon" href="https://favicon-generator.org/favicon-generator/htdocs/favicons/2014-12-23/4f3ad792719344e942f459a655033d73.ico" type="image/x-icon">
+    
+
+
+<link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700" rel="stylesheet">
+  <style>
+
+  * {
+    font-family: "Barlow";
+  }
+
+  body {
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    border: none;
+    box-shadow: none;
+    width: 200px;
+    height: 70px;
+    z-index: 999;
+
+    
+  }
+
+  #banner{
+    position: relative;
+    text-align: center;
+    /*background-image: url("https://images.unsplash.com/uploads/1412282232015a06e258a/4bdd2a58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ea87e217bd1bbf4d3e48a937452dd97&auto=format&fit=crop&w=1350&q=80");*/
+    background-size: cover;
+    width:  100%;
+    
+    min-height: 80vh;
+    display: inline-flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px; 
+
+
+  }
+
+  .banner-text{
+    max-width: 1200px;
+    color: white;
+    z-index: 99999999;
+/*    margin-top: 10%;
+    margin-bottom: 5%;*/
+
+  }
+
+  .banner-text > *:not(last-child) {
+    margin-bottom: 25px; /* например */
+  }
+
+  .dimmer {
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    
+    background-color: rgba(
+      
+      16,
+      15,
+      15,
+      0.3);
+  
+    z-index:1;
+  }
+
+  #myInput {
+
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 15%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+
+
+
+  }
+
+  .form {
+    padding-top: 25px;
+    margin-bottom: 25px;
+   /* padding-bottom: 200px;*/
+
+    
+
+  }
+
+    .button {
+ 
+    color: white;
+    padding: 15px 30px;
+    border: 5px solid;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background: none;
+    font-size: 16px;
+    /*text-shadow: 1px 1px 1px rgba(0,0,0,0.35);*/
+ 
+  }
+ .button:hover {
+    border-color: white;
+    transition: .3s ease-in-out;
+    background: white;
+    color: rgba(41, 38, 38, 0.73);
+    
+  }
+ 
+  input.button {
+  cursor:pointer;
+  }
+  
+  input { padding:0.5em; border-radius:5px; }
+  
+  input[type="submit"] {
+      width: auto;
+      font-size: 2.0em;
+      font-weight: 500;
+  }
+
+
+
+
+.sort {
+  display: none;}
+
+
+
+  .typewrite {
+    margin: 50px;
+  }
+
+  h1{
+    font-size: 4.0em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+    margin-top: 0;
+    max-width: 1100px;
+  }
+
+  h2{
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  }
+
+
+
+  a:hover {
+      text-decoration: underline;
+  }
+
+  .img-card{
+
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  #cards {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+
+  .card {
+
+    
+
+
+    position: relative;
+    width: 260px;
+    height: 300px;
+    padding: 0 20px;
+    margin: 20px;
+    display: inline-block;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+    background-size: cover;
+    display: none;
+
+  }
+
+  .card:after {
+    border-radius: 5px;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      16,
+      15,
+      15,
+      0.3);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+
+  .info {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+   /* margin: auto;*/
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+
+  }
+
+  .card-title {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    z-index: 999;
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  .card-description {
+    font-size: 1em;
+    color: white;
+    margin: 0;
+    margin-top: -10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  }
+
+  .card-param-1 {
+    position: absolute;
+    font-size: 0.9em;
+    color: white;
+    z-index: 2;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  }
+
+  .card-param-2 {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-size: 0.9em;
+    color: white;
+    z-index: 2;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+  }
+
+
+  .by{
+    text-align: center;
+    color: black;
+    font-size: 1.25em;
+    line-height: 0.1em;
+    padding-bottom: 20px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    font-weight: 570;
+  }
+
+  a:hover {
+    color: #6f6f6f;
+    text-decoration: none;
+  }
+
+  #contact {
+      position: fixed;
+      text-align: center;
+      z-index: 10;
+      right: 30px;
+      bottom: 30px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+      border-radius: 50%;
+      border-width: 4px;
+      width:100px;
+      height:100px;
+  }
+  #contact:hover {
+    transform: scale(1.05);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+  
+  #img-circle {
+
+    width: 70px;
+    border-radius: 100%
+
+  }
+
+  #contact {
+    background-size:cover;
+    background-position: center center;
+  }
+  #contact-2 {
+      display: inline-block;
+      text-align: center;
+      z-index: 3;
+      right: 30px;
+      bottom: 30px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.35);
+
+  }
+
+  #img-circle-2 {
+    vertical-align: middle;
+    margin-left: 0.5em;
+    display: inline-block;
+    width: 150px;
+    border-radius: 100%;
+
+  }
+
+  #img-circle-2:hover {
+    transform: scale(1.05);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+
+  .btn {
+    font-size: 1.3em;
+    font-weight:600;
+    color:rgb(100,100,100);
+    border: none;
+    outline: none;
+    padding:0.5em;
+    padding-left:1em;
+    padding-right:1em;
+    text-transform:uppercase;
+    background-color: white;
+    cursor: pointer;
+    border:1px solid #ccc;
+    border-style: solid;
+    border-radius: 5px;
+    margin:0.65em;
+    display:inline-block;
+    line-height:2;
+  }
+
+  .btn:hover, .active {
+    background-color:rgb(214,214,214);
+  }
+
+  .show {
+    display: inline-block;
+  }
+
+  #myBtnContainer {
+    
+    color: white;
+    z-index: 5;
+    bottom: 1em;
+    width:100%;
+    text-align:center;
+    left:0;
+  }
+
+  .myBtnContainerBox {
+
+    
+    width:100%;
+    max-width:12
+    00px;
+    margin:0 auto;
+  }
+
+  h1 {
+    font-weight:800;
+    margin-bottom:0;
+  }
+  h3 {
+    font-weight:100;
+    margin-top: 3vh;
+  }
+
+  .box {
+      background: red;
+      height: 200px;
+      width: 200px;
+      display: inline-block;
+  }
+
+  .shumniy-fix {
+    display: inline-block;
+    margin-bottom: 70px;
+  }
+
+  .about {
+    padding-left: 7%;
+    padding-right: 7%;
+    color: black;
+    font-size: 1.25em;
+  }
+
+  .about-h2 {
+    font-weight: 400;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 1.5em;
+    text-align: justify;
+  }
+
+
+  @media screen and (max-width: 1020px) {
+
+      #banner{
+          min-height: 43vh;
+      }
+
+      h1 {
+        font-size: 5em;
+      }
+
+      .card {
+        width: 90%;
+        height: 500px;
+      }
+
+      .card-title {
+        font-size: 3.3em;
+      }
+
+      .card-param-1 {
+        font-size: 1.9em;
+      }
+
+      .card-param-2 {
+        font-size: 1.9em;
+      }
+
+      .card-description {
+        font-size: 2.2em;
+      }
+  }
+
+    .description-header {
+      max-width: 700px;
+      font-size: 1.8em;
+      font-weight: 500;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .navbar > *:not(:last-child),
+    .navbar-section > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    .navbar-link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    .selected {
+      color: white;
+      border-bottom: 2px solid white;
+    }
+
+    a.selected:hover {
+      color: white;
+    }
+
+    .not-selected {
+      color: #dad7d7;
+    }
+
+    a.not-selected:hover {
+      text-decoration: none;
+      border-bottom: 2px solid white;
+      color: white;
+    }
+
+
+
+  </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.blinkloader.com/blinkloader-2.0.3.min.js"></script>
+
+</head>
+<body>
+
+
+
+<section id="banner"
+    data-blink-background
+    data-blink-src=
+    "https://images.unsplash.com/uploads/1412282232015a06e258a/4bdd2a58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ea87e217bd1bbf4d3e48a937452dd97&auto=format&fit=crop&w=1350&q=80"    data-blink-lazyload
+    data-blink-progressive
+    >
+<!--   <nav class="navbar">
+    <div class="navbar-section">
+      <a class="navbar-link selected" href="#">Home</a>
+    </div>
+
+    <div class="navbar-section">
+      <a class="navbar-link not-selected" href="#">Cafe</a>  
+      <a class="navbar-link not-selected" href="#">City Walk</a>
+    </div>
+  </nav> -->
+ <!--  <img class="logo" src=" soon "> -->
+     <div class="banner-text">
+          <h1>This is my awesome website</h1>
+          <h2 class="description-header">Let's say you want to make a list of best headphones</h2>
+
+          
+          <form class="form" action="https://docs.google.com/spreadsheets/d/1orqol1_QNOX74rRyOTL_l4J-kb2Eknm7vuMuhUyLcVI/copy">
+            <input class="button" type="submit" value="Use Template"></input> 
+          </form>
+
+      </div>
+  <div class="dimmer"></div>
+
+
+
+
+</div> 
+</section>
+
+
+  <div class="about">
+
+      <h2 class="about-h2"> This is awesome description title </h2>
+
+      <p class="about-p"> <p>You can add some description about your page to get people know more what about your website or any other text that you want to write.</p>
+<p>This is good for SEO as well. If you don't want to have this section you can just delete all this text and this section will disappear<p> </p>
+
+  </div>
+
+<div id="myBtnContainer"><div class="myBtnContainerBox"><button class="btn active" onclick="filterSelection('all')"> all</button><button class="btn" onclick="filterSelection('Audio-Technica')">Audio-Technica</button><button class="btn" onclick="filterSelection('Beyerdynamic')">Beyerdynamic</button><button class="btn" onclick="filterSelection('Bose')">Bose</button><button class="btn" onclick="filterSelection('Sennheiser')">Sennheiser</button><button class="btn" onclick="filterSelection('Pioneer')">Pioneer</button> 
+
+</div> 
+</div> 
+
+<!--   <div class="sort">
+    <button id="alphBnt" class="btn">PRICE ↓</button><button id="numBnt" class="btn">PRICE ↑</button> 
+  </div>  -->
+
+<div><div id="cards"><a target="_blank" href="https://www.amazon.com/Audio-Technica-ATH-M50x-Professional-Monitor-Headphones/dp/B00HVLUR86/ref=sr_1_fkmr1_1?ie=UTF8&qid=1534419561&sr=8-1-fkmr1&keywords=udio-Technica+ATH-M50x&smid=ATVPDKIKX0DER" class="card Audio-Technica"
+      
+      data-blink-background data-blink-src="http://static.shoplightspeed.com/shops/607207/files/006357990/audio-technica-ath-m50x-headphones.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1">small text 1</p><p class="card-param-2">small text 2</p><div class="info"><h2 class="card-title">Audio-Technica ATH-M50x</h2><p class="card-description">$149</p></div></a><a target="_blank" href="https://www.amazon.com/Beyerdynamic-880-PRO-Semi-Open-Headphones/dp/B079P9H1SH/ref=sr_1_1_sspa?ie=UTF8&qid=1534419600&sr=8-1-spons&keywords=beyerdynamic+dt880+pro&psc=1" class="card Beyerdynamic"
+      
+      data-blink-background data-blink-src="http://cdn.shopify.com/s/files/1/0754/9503/products/beyer_dt880_pro_grande.png?v=1530447100" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Beyerdynamic DT 880 PRO</h2><p class="card-description">$219</p></div></a><a target="_blank" href="https://www.amazon.com/Bose-QuietComfort-Wireless-Headphones-Cancelling/dp/B0756CYWWD/ref=sr_1_1?ie=UTF8&qid=1534419635&sr=8-1&keywords=Bose+QC35+II" class="card Bose"
+      
+      data-blink-background data-blink-src="https://images-na.ssl-images-amazon.com/images/I/61JPyEqYGQL._SX425_.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Bose QC35 II</h2><p class="card-description">$299</p></div></a><a target="_blank" href="https://www.amazon.com/Audio-Technica-ATH-M60X-Closed-Back-Dynamic-Headphones/dp/B07CPRXR6W/ref=sr_1_2?ie=UTF8&qid=1534419679&sr=8-2&keywords=Audio-Technica+ATH-M60x" class="card Audio-Technica"
+      
+      data-blink-background data-blink-src="https://cdn.head-fi.org/a/10096974.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Audio-Technica ATH-M60x</h2><p class="card-description">$199</p></div></a><a target="_blank" href="https://www.amazon.com/Pioneer-DJ-HDJ-2000MK2-K-Headphone-Black/dp/B00T2UC42G/ref=sr_1_2?ie=UTF8&qid=1534419731&sr=8-2&keywords=Pioneer+HDJ-2000" class="card Pioneer"
+      
+      data-blink-background data-blink-src="https://pdj-ecom-cdn.azureedge.net/-/media/pioneerdj/images/products/headphones/hdj-2000/black/hdj-2000-main.png?h=600&w=800&hash=234C79ED50AF1460F656B83D074EF79D6944DA88" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Pioneer HDJ-2000</h2><p class="card-description">$289</p></div></a><a target="_blank" href="https://www.amazon.com/beyerdynamic-Custom-Headphones-Accessory-Microphone/dp/B00PK2LJ4E/ref=sr_1_1?ie=UTF8&qid=1534419746&sr=8-1&keywords=Beyerdynamic+CUSTOM+ONE+PRO+PLUS" class="card Beyerdynamic"
+      
+      data-blink-background data-blink-src="https://images.musicstore.de/images/0960/beyerdynamic-custom-one-pro-plus-black-16-ohm_1_REC0011853-000.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Beyerdynamic CUSTOM ONE PRO PLUS</h2><p class="card-description">$169</p></div></a><a target="_blank" href="https://www.amazon.com/Sennheiser-HD-8-DJ-Headphones/dp/B00HVI1FBM/ref=sr_1_3?ie=UTF8&qid=1534419758&sr=8-3&keywords=sennheiser+hd+8" class="card Sennheiser"
+      
+      data-blink-background data-blink-src="https://www.bhphotovideo.com/images/images2500x2500/sennheiser_hd8_dj_headphone_1024946.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Sennheiser HD8</h2><p class="card-description">$229</p></div></a><a target="_blank" href="https://www.amazon.com/Sennheiser-Momentum-Wireless-Active-Cancellation/dp/B00SNI44CQ/ref=sr_1_3?ie=UTF8&qid=1534419820&sr=8-3&keywords=Sennheiser+Momentum+2.0" class="card Sennheiser"
+      
+      data-blink-background data-blink-src="https://images-na.ssl-images-amazon.com/images/I/61l-kBcGEoL._SX425_.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Sennheiser Momentum 2.0</h2><p class="card-description">$399</p></div></a><a target="_blank" href="https://www.amazon.com/Sennheiser-HD-25-Professional-Headphone/dp/B01CRI3UOU/ref=sr_1_3?ie=UTF8&qid=1534419802&sr=8-3&keywords=sennheiser+hd25" class="card Sennheiser"
+      
+      data-blink-background data-blink-src="https://www.studiocare.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/e/sennheiser-hd25-mkii-be.jpg" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Sennheiser HD 25</h2><p class="card-description">$149</p></div></a><a target="_blank" href="" class="card "
+      
+      data-blink-background data-blink-src="https://lh5.googleusercontent.com/igDlRhldtbNUp3y1sSzIO7n_ViGurVU9TV8X59vyV_gUCyHJ90Q2UiRg2Tm3t3LQDkvYwGKlktcJUw=w2560-h1360" data-blink-lazyload data-blink-progressive "><p class="card-param-1"></p><p class="card-param-2"></p><div class="info"><h2 class="card-title">Mr. Dog</h2><p class="card-description">Image from Google Drive</p></div></a></div><a id=contact target="_blank" href="" style="background-image:url('');"></a><p class="by">Made with <a href="/"<b>Sheet 2 Site</b></a></p><p class="by">Images optimized by <a href="https://twitter.com/blinkloader/?ref=sheet2site"<b>Blinkloader</b></a></p><hr><p class="by">Try also <a target="_blank" href="https://www.progressbarosx.com/?ref=sheet2siteref"<b>Progress Bar OS X</b></a> and <a target="_blank" href="https://www.makeosxgreatagain.com/?ref=sheet2siteref"<b>Make OS X Great Again</b></p><br>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("card");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+</script>
+
+<script>
+  //var $divs = $("div.box");
+  var $divs = $("a.card");
+
+  $('#alphBnt').on('click', function () {
+      var alphabeticallyOrderedDivs = $divs.sort(function (a, b) {
+          return $(a).find("p.card-description").text() > $(b).find("p.card-description").text();
+      });
+      $("#cards").html(alphabeticallyOrderedDivs);
+
+  });
+
+  $('#numBnt').on('click', function () {
+      var numericallyOrderedDivs = $divs.sort(function (a, b) {
+          return $(a).find("p.card-description").text() < $(b).find("p.card-description").text();
+      });
+      $("#cards").html(numericallyOrderedDivs);
+  });
+
+
+
+  
+  // $('#numBnt').click(function(){
+  //   alert("The numBnt was clicked");
+  // });
+
+  </script>
+  <script>
+        Blinkloader.optimize({projectId: "3287797048"});
+      </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"67a6550e97","applicationID":"100034697","transactionName":"Z1VSY0JQW0ZZUxZRXF4fZUVZHlRFUR8LVldVSB5HWEE=","queueTime":6,"applicationTime":1999,"atts":"SxJRFQpKSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
