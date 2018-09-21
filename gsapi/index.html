@@ -23,20 +23,19 @@
 
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
-        //valueRenderOption: '',  // TODO: Update placeholder value.
+        valueRenderOption: '',  // TODO: Update placeholder value.
 
         // How dates, times, and durations should be represented in the output.
         // This is ignored if value_render_option is
         // FORMATTED_VALUE.
         // The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
-        //dateTimeRenderOption: '',  // TODO: Update placeholder value.
+        dateTimeRenderOption: '',  // TODO: Update placeholder value.
       };
 
       var request = gapi.client.sheets.spreadsheets.values.get(params);
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
         console.log(response.result);
-        populatesheet(response.result);
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -53,7 +52,7 @@
       //   'https://www.googleapis.com/auth/drive.readonly'
       //   'https://www.googleapis.com/auth/spreadsheets'
       //   'https://www.googleapis.com/auth/spreadsheets.readonly'
-      var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+      var SCOPE = '';
 
       gapi.client.init({
         'apiKey': API_KEY,
@@ -83,15 +82,6 @@
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
     }
-
-    function populatesheet(result) {
-      for(var row=0; row<8; row++) {
-        for(var col=0; col<3; col++) {
-        document.getElementById(row+":"+col).value = result.values[row][col];
-      }
-
-        }
-      }
     </script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
@@ -99,20 +89,5 @@
     </script>
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-
-    <div style="margin-left:auto; margin-right:auto; width:960px;">
-
-      <?php
-
-      for($row = 0; $row < $row++) {
-      echo "<div style='clear:both'>";
-        for($col = 0; $col < 3; $col++) {
-        echo "<input type='text' style='float:left;' name = $row:$col' id=$row;$col'>";
-      }
-    echo "</div>";
-  }
-  ?>
-
-
   </body>
 </html>
